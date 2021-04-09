@@ -88,3 +88,12 @@ body {
   font-size: 1.2rem;
   cursor: pointer;
 }
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
