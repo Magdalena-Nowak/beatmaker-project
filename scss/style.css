@@ -145,4 +145,8 @@ body {
             transform: scale(1.2);
   }
 }
+
+.mute.active {
+  background-color: #3c3c3d;
+}
 /*# sourceMappingURL=style.css.map */
