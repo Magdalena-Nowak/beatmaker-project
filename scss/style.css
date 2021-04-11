@@ -15,9 +15,20 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+#logo {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.fa-grin-beam {
+  margin: 0 1rem;
+  font-size: 2.5rem;
+}
+
 .sequencer {
   width: 80%;
-  margin: 8rem auto;
+  margin: auto;
 }
 
 .controls {
@@ -146,7 +157,27 @@ body {
   }
 }
 
-.mute.active {
-  background-color: #3c3c3d;
+.fa-volume-up {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.tempo {
+  margin: 2rem auto;
+  width: 30%;
+}
+
+.tempo p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.tempo-slider {
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 100%;
+  background-color: #b6b6c7;
+  padding: 0.2rem;
+  margin: 1rem 0;
 }
 /*# sourceMappingURL=style.css.map */

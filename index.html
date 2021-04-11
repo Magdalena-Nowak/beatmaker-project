@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <header>
+        <h1 id="logo">Beatmaker <i class="far fa-grin-beam"></i></h1>
+    </header>
     <div class="sequencer">
 
         <div class="kick-track">
@@ -87,6 +90,10 @@
         <audio class="kick-sound" src="./sounds/kick-classic.wav"></audio>
         <audio class="snare-sound" src="./sounds/snare-acoustic01.wav"></audio>
         <audio class="hihat-sound" src="./sounds/hihat-acoustic01.wav"></audio>
+    </div>
+    <div class="tempo">
+        <input class="tempo-slider" type="range" max="300" min="20" value="150">
+        <p>Tempo: <span class="tempo-nr">150</span></p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
