@@ -28,10 +28,23 @@ header {
 
 main {
   flex: 3 1 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 1200px) {
+  main {
+    min-height: 70vh;
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    min-height: 80vh;
+  }
 }
 
 footer {
@@ -71,6 +84,12 @@ footer div {
   align-items: center;
 }
 
+@media (min-width: 1200px) {
+  .sequencer {
+    justify-content: space-around;
+  }
+}
+
 .kick-track,
 .snare-track,
 .hihat-track {
@@ -80,12 +99,32 @@ footer div {
   align-items: center;
 }
 
+@media (min-width: 1200px) {
+  .kick-track,
+  .snare-track,
+  .hihat-track {
+    flex-wrap: no-wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem 0;
+  }
+}
+
 .pad {
   width: 3rem;
   height: 3rem;
   margin: 0.2rem;
   cursor: pointer;
   transition: all 0.5s ease;
+}
+
+@media (min-width: 540px) {
+  .pad {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 .kick-pad {
@@ -123,6 +162,48 @@ footer div {
   width: 80%;
 }
 
+@media (min-width: 377px) {
+  .kick,
+  .snare,
+  .hihat {
+    width: 70%;
+  }
+}
+
+@media (min-width: 430px) {
+  .kick,
+  .snare,
+  .hihat {
+    width: 60%;
+  }
+}
+
+@media (min-width: 540px) {
+  .kick,
+  .snare,
+  .hihat {
+    width: 60%;
+  }
+}
+
+@media (min-width: 740px) {
+  .kick,
+  .snare,
+  .hihat {
+    width: 100%;
+    flex-wrap: no-wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .kick,
+  .snare,
+  .hihat {
+    flex-wrap: no-wrap;
+    margin-left: 3rem;
+  }
+}
+
 .controls {
   display: flex;
   flex-direction: column;
@@ -156,6 +237,28 @@ footer div {
   width: 70%;
   height: 2rem;
   font-family: "Raleway", sans-serif;
+}
+
+@media (min-width: 1200px) {
+  .controls {
+    flex-wrap: no-wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 20%;
+  }
+  .controls h1 {
+    margin-right: 1rem;
+    width: 5rem;
+  }
+  .controls .controls-wrapper button {
+    flex: 1 1 10rem;
+  }
+  .controls .controls-wrapper select {
+    flex: 2 1 30rem;
+    min-width: 10rem;
+  }
 }
 
 .controls-wrapper {
@@ -198,6 +301,24 @@ footer div {
 .tempo p {
   font-size: 1rem;
   text-align: center;
+}
+
+@media (min-width: 540px) {
+  .tempo {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tempo {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .tempo {
+    padding-bottom: 10rem;
+  }
 }
 
 .tempo-slider {

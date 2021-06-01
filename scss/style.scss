@@ -28,7 +28,18 @@ header {
 }
 main {
   flex: 3 1 60%;
+  width: 100%;
   @include flex(flex, column, center, center);
+}
+@media (min-width: 1200px) {
+  main {
+    min-height: 70vh;
+  }
+}
+@media (min-width: 1600px) {
+  main {
+    min-height: 80vh;
+  }
 }
 footer {
   flex: 1 1 15%;
@@ -54,11 +65,25 @@ footer {
   margin: auto;
   @include flex(flex, column, stretch, center);
 }
-
+@media (min-width: 1200px) {
+  .sequencer {
+    justify-content: space-around;
+  }
+}
 .kick-track,
 .snare-track,
 .hihat-track {
   @include flex(flex, column, center, center);
+}
+
+@media (min-width: 1200px) {
+  .kick-track,
+  .snare-track,
+  .hihat-track {
+    flex-wrap: no-wrap;
+    @include flex(flex, row, flex-start, center);
+    margin: 2rem 0;
+  }
 }
 
 .pad {
@@ -68,7 +93,12 @@ footer {
   cursor: pointer;
   transition: all 0.5s ease;
 }
-
+@media (min-width: 540px) {
+  .pad {
+    width: 4rem;
+    height: 4rem;
+  }
+}
 .kick-pad {
   background-color: #afffc0;
   &.active {
@@ -97,7 +127,43 @@ footer {
   flex-wrap: wrap;
   width: 80%;
 }
-
+@media (min-width: 377px) {
+  .kick,
+  .snare,
+  .hihat {
+    width: 70%;
+  }
+}
+@media (min-width: 430px) {
+  .kick,
+  .snare,
+  .hihat {
+    width: 60%;
+  }
+}
+@media (min-width: 540px) {
+  .kick,
+  .snare,
+  .hihat {
+    width: 60%;
+  }
+}
+@media (min-width: 740px) {
+  .kick,
+  .snare,
+  .hihat {
+    width: 100%;
+    flex-wrap: no-wrap;
+  }
+}
+@media (min-width: 1200px) {
+  .kick,
+  .snare,
+  .hihat {
+    flex-wrap: no-wrap;
+    margin-left: 3rem;
+  }
+}
 .controls {
   @include flex(flex, column, center, center);
   h1 {
@@ -126,10 +192,36 @@ footer {
   }
 }
 
+@media (min-width: 1200px) {
+  .controls {
+    flex-wrap: no-wrap;
+    @include flex(flex, row, space-between, center);
+    flex: 1 1 20%;
+    h1 {
+      margin-right: 1rem;
+      width: 5rem;
+    }
+    .controls-wrapper {
+      button {
+        flex: 1 1 10rem;
+      }
+      select {
+        flex: 2 1 30rem;
+        min-width: 10rem;
+      }
+    }
+  }
+}
+
 .controls-wrapper {
   @include flex(flex, row, space-between, center);
   margin: 0.5rem 0;
 }
+// @media (min-width: 1200px) {
+//   .controls-wrapper {
+//     width: 10rem;
+//   }
+// }
 .play {
   border: none;
   width: 5rem;
@@ -157,6 +249,22 @@ footer {
   p {
     font-size: 1rem;
     text-align: center;
+  }
+}
+@media (min-width: 540px) {
+  .tempo {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tempo {
+    width: 20%;
+  }
+}
+@media (min-width: 1600px) {
+  .tempo {
+    padding-bottom: 10rem;
   }
 }
 .tempo-slider {
