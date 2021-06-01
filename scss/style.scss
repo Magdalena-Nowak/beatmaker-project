@@ -217,11 +217,6 @@ footer {
   @include flex(flex, row, space-between, center);
   margin: 0.5rem 0;
 }
-// @media (min-width: 1200px) {
-//   .controls-wrapper {
-//     width: 10rem;
-//   }
-// }
 .play {
   border: none;
   width: 5rem;
@@ -264,7 +259,7 @@ footer {
 }
 @media (min-width: 1600px) {
   .tempo {
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
   }
 }
 .tempo-slider {
@@ -272,6 +267,5 @@ footer {
   cursor: pointer;
   width: 100%;
   background-color: rgb(182, 182, 199);
-  // padding: 0.1rem;
   margin: 1rem 0;
 }
