@@ -1,3 +1,10 @@
+@mixin flex($flex, $direction, $justify, $align) {
+  display: $flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,33 +15,100 @@ svg {
   pointer-events: none;
 }
 body {
-  font-size: 62.5%;
+  font-size: 10px;
   font-family: "Raleway", sans-serif;
+  @include flex(flex, column, space-around, center);
+}
+header {
+  flex: 1 1 30%;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  width: 100%;
+  background-color: rgb(49, 49, 49);
+}
+main {
+  flex: 3 1 60%;
+  @include flex(flex, column, center, center);
+}
+footer {
+  flex: 1 1 15%;
+  width: 100%;
+  min-height: 10vh;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(49, 49, 49);
+  margin-top: 2rem;
+  @include flex(flex, row, center, center);
+  div {
+    @include flex(flex, row, center, center);
+  }
 }
 #logo {
-  font-size: 1.8rem;
-  margin-top: 2rem;
+  font-size: 1.6rem;
   text-align: center;
-}
-.fa-grin-beam {
-  margin: 0 1rem;
-  font-size: 2.5rem;
+  margin: 1rem 0;
+  color: white;
 }
 .sequencer {
-  width: 80%;
+  width: 90%;
   margin: auto;
+  @include flex(flex, column, stretch, center);
 }
-.controls {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex: 1 1 20rem;
-  h1 {
-    font-size: 1.6rem;
-    font-weight: bold;
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  @include flex(flex, column, center, center);
+}
+
+.pad {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.kick-pad {
+  background-color: #afffc0;
+  &.active {
+    background-color: #53cc6e;
   }
-  .fa-volume-mute {
-    font-size: 1.6rem;
+}
+
+.snare-pad {
+  background-color: #bde0fe;
+  &.active {
+    background-color: #5eb3fd;
+  }
+}
+
+.hihat-pad {
+  background-color: #cdb4db;
+  &.active {
+    background-color: #a375bd;
+  }
+}
+
+.kick,
+.snare,
+.hihat {
+  @include flex(flex, row, space-between, center);
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.controls {
+  @include flex(flex, column, center, center);
+  h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .fa-volume-mute,
+  .fa-volume-up {
+    font-size: 1rem;
     color: white;
   }
   button {
@@ -43,59 +117,29 @@ body {
     background-color: rgb(95, 95, 105);
     cursor: pointer;
     transition: all 0.5s ease;
+    margin-right: 1rem;
   }
   select {
-    width: 8rem;
-    height: 2.5rem;
+    width: 70%;
+    height: 2rem;
     font-family: "Raleway", sans-serif;
   }
 }
-.pad {
-  width: 4.5rem;
-  height: 4.5rem;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-.kick-pad {
-  background-color: #ffafcc;
-}
-.kick-pad.active {
-  background-color: #ff70a5;
-}
-.snare-pad {
-  background-color: #bde0fe;
-}
-.snare-pad.active {
-  background-color: #5eb3fd;
-}
-.hihat-pad {
-  background-color: #cdb4db;
-}
-.hihat-pad.active {
-  background-color: #a375bd;
-}
-.kick-track,
-.snare-track,
-.hihat-track {
-  display: flex;
-  margin: 5rem 0;
-}
-.kick,
-.snare,
-.hihat {
-  display: flex;
-  flex: 2 1 20rem;
-  justify-content: space-around;
+
+.controls-wrapper {
+  @include flex(flex, row, space-between, center);
+  margin: 0.5rem 0;
 }
 .play {
   border: none;
-  width: 7rem;
-  height: 3rem;
+  width: 5rem;
+  height: 2rem;
   color: white;
   background-color: rgb(95, 95, 105);
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   cursor: pointer;
+  margin: 1rem 0;
 }
 
 @keyframes playTrack {
@@ -107,16 +151,11 @@ body {
   }
 }
 
-.fa-volume-up {
-  font-size: 1.6rem;
-  color: white;
-}
-
 .tempo {
-  margin: 2rem auto;
-  width: 30%;
+  @include flex(flex, column, center, center);
+  width: 60%;
   p {
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-align: center;
   }
 }
@@ -125,6 +164,6 @@ body {
   cursor: pointer;
   width: 100%;
   background-color: rgb(182, 182, 199);
-  padding: 0.2rem;
+  // padding: 0.1rem;
   margin: 1rem 0;
 }

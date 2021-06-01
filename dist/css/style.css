@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+body {
+  font-size: 10px;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header {
+  flex: 1 1 30%;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  width: 100%;
+  background-color: #313131;
+}
+
+main {
+  flex: 3 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  flex: 1 1 15%;
+  width: 100%;
+  min-height: 10vh;
+  font-size: 1rem;
+  color: white;
+  background-color: #313131;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: white;
+}
+
+.sequencer {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pad {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.kick-pad {
+  background-color: #afffc0;
+}
+
+.kick-pad.active {
+  background-color: #53cc6e;
+}
+
+.snare-pad {
+  background-color: #bde0fe;
+}
+
+.snare-pad.active {
+  background-color: #5eb3fd;
+}
+
+.hihat-pad {
+  background-color: #cdb4db;
+}
+
+.hihat-pad.active {
+  background-color: #a375bd;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.controls .fa-volume-mute,
+.controls .fa-volume-up {
+  font-size: 1rem;
+  color: white;
+}
+
+.controls button {
+  padding: 0.5rem;
+  border: none;
+  background-color: #5f5f69;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin-right: 1rem;
+}
+
+.controls select {
+  width: 70%;
+  height: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.controls-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.play {
+  border: none;
+  width: 5rem;
+  height: 2rem;
+  color: white;
+  background-color: #5f5f69;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.tempo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.tempo p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tempo-slider {
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 100%;
+  background-color: #b6b6c7;
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=style.css.map */
