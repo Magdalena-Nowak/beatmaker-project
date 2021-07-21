@@ -1,7 +1,5 @@
 # beatmaker-project
 
-# dynamic_website
-
 Page website based on the course Developed by Ed.
 
 Live demo: https://magdalena-nowak.github.io/beatmaker-project/
